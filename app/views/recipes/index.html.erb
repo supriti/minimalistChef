@@ -1,0 +1,13 @@
+<% if @recipes.blank? %>
+<p>There are not any recipes currently in the system.</p>
+<% else %>
+<p>These are the current recipes in our system</p>
+
+<ul id = "recipes">
+   <% @recipes.each do |c| %>
+   <li><%= link_to c.name, {:action => 'show', :id => c.id} -%></li>
+   <% end %>
+</ul>
+
+<% end %>
+<p><%= link_to "Add new Recipe", {:action => 'new' }%></p>

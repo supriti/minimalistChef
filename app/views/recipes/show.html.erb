@@ -1,0 +1,15 @@
+<h1><%= @recipe.name %></h1>
+
+<p>
+    <strong>URL: </strong> $<%= @recipe.url %><br />
+    <strong>Image URL :</strong> <%= @recipe.image_url %><br />
+    <strong>Ingredients:</strong> <br />
+    <ul id = "ingredients">
+    	<% @ingredients.each do |i| %> 
+    		<li>  <%= i.name -%> </li>
+    	<% end %>
+	</ul>
+</p>
+
+<hr />
+
